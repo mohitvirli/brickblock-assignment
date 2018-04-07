@@ -23,7 +23,52 @@
   font-weight: 300;
   src: url("../fonts/cinetype/gt-cinetype-light.woff"); }
 
+.container {
+  max-width: 1030px;
+  margin: 0 auto; }
+
+.header-wrapper {
+  padding: 1em;
+  font-size: 24px;
+  text-transform: uppercase; }
+
+.grid {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between; }
+  .grid .column {
+    flex: 1; }
+
+@media screen and (max-width: 700px) {
+  .grid {
+    flex-wrap: wrap; }
+    .grid .column {
+      width: 100%;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee; }
+      .grid .column:last-child {
+        border-bottom: none; } }
+
+.navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #1e2c48;
+  padding: 1em;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); }
+  .navbar-wrapper .container .logo-wrapper {
+    width: 165px;
+    position: relative;
+    display: block; }
+    .navbar-wrapper .container .logo-wrapper img.logo {
+      width: 100%; }
+
+.graphs-container-wrapper {
+  padding: 6em 1em 2em; }
+
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  background-color: #F6F7FB;
   font-family: rubik, sans-serif; }

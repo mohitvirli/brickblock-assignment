@@ -1,0 +1,13 @@
+.navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #1e2c48;
+  padding: 1em;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); }
+  .navbar-wrapper .container .logo-wrapper {
+    width: 165px;
+    position: relative;
+    display: block; }
+    .navbar-wrapper .container .logo-wrapper img.logo {
+      width: 100%; }

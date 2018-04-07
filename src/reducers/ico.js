@@ -1,10 +1,25 @@
-// import initialState from './initialState';
-// import {FETCH_STUFF, RECEIVE_STUFF} from '../actions/actionTypes';
+import { getCurrencyData } from "../utils/ico";
+import { Map, fromJS } from 'immutable';
 
-export const ico = (state = {}, action) => {
+const initialState = Map({
+	preIco: Map(),
+	mainIco: Map()
+});
+
+export const ico = (state = initialState, action) => {
 	switch (action.type) {
 		case 'SET_ICO_DATA': {
-			return state;
+			const { data } = action;
+			const mainIco = Map({
+				total: data.ico.length,
+				currency: fromJS(getCurrencyData(data.ico)),
+			});
+			const preIco = Map({
+				total: data.preIco.length,
+				currency: fromJS(getCurrencyData(data.preIco)),
+			});
+			return state.set('preIco', preIco)
+				.set('mainIco', mainIco);
 		}
 		default:
 			return state;
