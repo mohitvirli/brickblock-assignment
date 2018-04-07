@@ -3,6 +3,9 @@
 
 export const ico = (state = {}, action) => {
 	switch (action.type) {
+		case 'SET_ICO_DATA': {
+			return state;
+		}
 		default:
 			return state;
 	}

@@ -1,4 +1,4 @@
-export const setData = (data) => ({
-	type: 'SET_DATA',
+export const setICOData = (data) => ({
+	type: 'SET_ICO_DATA',
 	data,
 });

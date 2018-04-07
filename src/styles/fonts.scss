@@ -1,0 +1,11 @@
+@import "./mixins.scss";
+
+@include fontFace('rubik', 'rubik-regular');
+
+$fontWeight: 'bold' 'italic' 'regular' 'light';
+$fontWeightValue: 500 400 400 300;
+
+@each $currentFontWeight in $fontWeight {
+	$i: index($fontWeight, $currentFontWeight);
+	@include fontFace('cinetype','gt-cinetype-#{$currentFontWeight}',  nth($fontWeightValue, $i));
+}
