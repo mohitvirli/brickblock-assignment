@@ -6,14 +6,14 @@ import TotalCoins from './TotalCoins';
 class GraphsContainer extends Component {
 	render() {
 		const { preIco, mainIco } = this.props;
-		return preIco.size && mainIco.size ? (
+		return (
 			<div className="graphs-container-wrapper">
 				<div className="container">
 					<Transactions preIco={preIco} mainIco={mainIco}/>
 					<TotalCoins preIco={preIco} mainIco={mainIco}/>
 				</div>
 			</div>
-		) : null;
+		);
 	}
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import { Doughnut, HorizontalBar } from 'react-chartjs-2';
+import Loader from './Loader';
 import { getOptions, getColors } from "../utils/chart";
 
 class Transactions extends Component {
@@ -61,17 +62,18 @@ class Transactions extends Component {
 
 	}
 	render() {
+		const { preIco, mainIco } = this.props;
 		return (
 			<div className='transactions-wrapper'>
 				<Header content='Transactions'/>
-				<div className="grid">
-					<div className="column">
-						{this.getMainChart()}
-					</div>
-					<div className="column">
-						{this.getHorizontalBar()}
-					</div>
-				</div>
+				{preIco.size && mainIco.size ? <div className="grid">
+						<div className="column">
+							{this.getMainChart()}
+						</div>
+						<div className="column">
+							{this.getHorizontalBar()}
+						</div>
+					</div> : <Loader/>}
 			</div>
 		);
 	}

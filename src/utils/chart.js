@@ -1,4 +1,7 @@
 export const getOptions = (title, options) => ({
+	animation: {
+		duration: 2000
+	},
 	title: {
 		display: true,
 		position: 'bottom',

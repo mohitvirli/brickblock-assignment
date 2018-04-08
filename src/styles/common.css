@@ -15,6 +15,15 @@
   .grid .column {
     flex: 1; }
 
+.loader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16em; }
+  .loader img {
+    width: 12em; }
+
 @media screen and (max-width: 700px) {
   .grid {
     flex-wrap: wrap; }

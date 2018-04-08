@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import { Doughnut } from 'react-chartjs-2';
+import Loader from './Loader';
 import { getUnits } from "../utils/ico";
 import { getOptions, getColors } from "../utils/chart";
 import { getCoinsCount } from "../utils/conversion";
@@ -36,12 +37,13 @@ class TotalCoins extends Component {
 	}
 
 	render() {
+		const { preIco, mainIco } = this.props;
 		return (
 			<div className='transactions-wrapper'>
 				<Header content='Total Coins Exchanged'/>
-				<div className='grid'>
+				{preIco.size && mainIco.size ? <div className='grid'>
 					{this.getData()}
-				</div>
+				</div> : <Loader/>}
 			</div>
 		);
 	}
