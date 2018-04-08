@@ -1,2 +1,4 @@
 .graphs-container-wrapper {
-  padding: 6em 1em 2em; }
+  padding: 5em 1em 2em; }
+  .graphs-container-wrapper .transactions-wrapper {
+    padding: 1em; }

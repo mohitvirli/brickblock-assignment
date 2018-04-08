@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import Header from './Header';
-import { Doughnut, Bar, HorizontalBar } from 'react-chartjs-2';
+import { Doughnut, HorizontalBar } from 'react-chartjs-2';
 import { getOptions, getColors } from "../utils/chart";
 
 class Transactions extends Component {

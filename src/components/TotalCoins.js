@@ -38,8 +38,8 @@ class TotalCoins extends Component {
 	render() {
 		return (
 			<div className='transactions-wrapper'>
-				<Header content='Total Coins'/>
-				<div className="grid">
+				<Header content='Total Coins Exchanged'/>
+				<div className='grid'>
 					{this.getData()}
 				</div>
 			</div>

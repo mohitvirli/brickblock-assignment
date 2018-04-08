@@ -1,5 +1,5 @@
-import { getCurrencyData } from "../utils/ico";
 import { Map, fromJS } from 'immutable';
+import { getCurrencyData } from "../utils/ico";
 
 const initialState = Map({
 	preIco: Map(),

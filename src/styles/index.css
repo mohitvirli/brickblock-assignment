@@ -28,8 +28,9 @@
   margin: 0 auto; }
 
 .header-wrapper {
-  padding: 1em;
+  padding: 1em 0;
   font-size: 24px;
+  margin-bottom: 20px;
   text-transform: uppercase; }
 
 .grid {
@@ -64,7 +65,9 @@
       width: 100%; }
 
 .graphs-container-wrapper {
-  padding: 6em 1em 2em; }
+  padding: 5em 1em 2em; }
+  .graphs-container-wrapper .transactions-wrapper {
+    padding: 1em; }
 
 body {
   margin: 0;
