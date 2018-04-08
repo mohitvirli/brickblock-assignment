@@ -10,13 +10,13 @@ export const ico = (state = initialState, action) => {
 	switch (action.type) {
 		case 'SET_ICO_DATA': {
 			const { data } = action;
-			const mainIco = Map({
+			const mainIco = fromJS({
 				total: data.ico.length,
-				currency: fromJS(getCurrencyData(data.ico)),
+				currency: getCurrencyData(data.ico),
 			});
-			const preIco = Map({
+			const preIco = fromJS({
 				total: data.preIco.length,
-				currency: fromJS(getCurrencyData(data.preIco)),
+				currency: getCurrencyData(data.preIco),
 			});
 			return state.set('preIco', preIco)
 				.set('mainIco', mainIco);
